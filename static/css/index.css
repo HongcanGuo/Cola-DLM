@@ -1005,6 +1005,20 @@ figure.cola-figure figcaption b { color: var(--ink); }
   padding-bottom: 1px;
 }
 .footer a:hover { color: var(--accent); border-color: var(--accent); }
+.footer .visitor-map {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+}
+.footer .visitor-map > div,
+.footer .visitor-map iframe,
+.footer .visitor-map .clustrmaps-widget,
+.footer .visitor-map [id^="clustrmaps"] {
+  margin: 0 auto;
+  max-width: 100%;
+}
 
 /* =================== BACK TO TOP =================== */
 .back-to-top {
