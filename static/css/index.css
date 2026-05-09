@@ -1006,18 +1006,22 @@ figure.cola-figure figcaption b { color: var(--ink); }
 }
 .footer a:hover { color: var(--accent); border-color: var(--accent); }
 .footer .visitor-map {
-  margin-top: 1.4rem;
+  margin: 1.2rem auto 0;
+  width: 240px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 180px;
 }
 .footer .visitor-map > div,
 .footer .visitor-map iframe,
+.footer .visitor-map img,
 .footer .visitor-map .clustrmaps-widget,
 .footer .visitor-map [id^="clustrmaps"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
   margin: 0 auto;
-  max-width: 100%;
 }
 
 /* =================== BACK TO TOP =================== */
