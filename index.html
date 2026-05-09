@@ -49,6 +49,7 @@
       <a href="#discussion">Discussion</a>
       <a href="#unified">Unified</a>
       <a href="#reflections">Reflections</a>
+      <a href="#authors-note">Notes</a>
       <a href="#bibtex" class="is-cta">BibTeX</a>
     </nav>
   </div>
@@ -1233,6 +1234,90 @@
       </button>
     </article>
 
+  </div>
+</section>
+
+<!-- ==== AUTHOR'S NOTE / READING GUIDE ==== -->
+<section class="section" id="authors-note">
+  <div class="container narrow">
+    <div class="section-heading reveal">
+      <span class="eyebrow">From the Authors</span>
+      <h2>A letter to the community</h2>
+      <p class="lead">
+        A more personal, first-person take on what Cola DLM is really trying to say — and an
+        invitation for everyone to push the conversation further.
+      </p>
+    </div>
+
+    <article class="authors-note reveal">
+      <div class="authors-note-body">
+        <p>
+          Personally, I believe that
+          <strong>representation is the central problem of this work</strong>.
+        </p>
+
+        <p>
+          What Cola DLM aims to emphasize is not merely diffusion itself, but a more fundamental
+          perspective: must language modeling necessarily be bound to discrete tokens? Tokens are
+          only the surface carriers of language, while what is truly more stable and transferable
+          may be the continuous semantic representations hidden behind different token realizations.
+        </p>
+
+        <p>
+          Therefore, what we care more about is how to decompose text generation into two levels
+          through a hierarchical modeling approach: one level is high-level semantic organization
+          in continuous space, and the other is the realization of concrete token sequences. In
+          other words, the <em>VAE</em> is responsible for establishing a semantic interface from
+          text to latent space, the <em>DiT</em> is responsible for modeling the continuous latent
+          prior, and the <em>decoder</em> then instantiates latent semantics into text. But from a
+          more general perspective, the VAE is not the only choice; it can be replaced by other
+          stronger representation models. Diffusion is also not the only choice; it can be
+          replaced by other continuous distribution matching or prior modeling methods. What we
+          truly want to explore is:
+          <strong>does there exist an information carrier that is more efficient, more elegant,
+          and closer to the essence of semantics than discrete tokens?</strong>
+        </p>
+
+        <p>
+          The compression experiments in the paper&rsquo;s discussion section also provide a very
+          interesting signal: when latent grouping is aligned with text boundaries, simple
+          2&times; compression does not necessarily harm generation, and may even lead to better
+          results. This suggests that the token-level carrier may not be the optimal form of
+          information load; a moderately compressed continuous latent may be more suitable for
+          carrying global semantic structure, while leaving local expression details to the
+          decoder. This is exactly the core point that Cola DLM tries to convey: we do not merely
+          want to recover tokens, but to learn the semantic structures behind tokens.
+        </p>
+
+        <p>
+          Furthermore, this idea naturally points toward unified multimodal modeling.
+          Representation learning in vision has already developed very maturely, whereas text has
+          long been dominated more by tokenization. In the final section of the discussion, we
+          provide a preliminary sample that attempts to place visual prior representations and
+          textual prior representations into the same continuous space for unified modeling.
+          Although this result is still very preliminary, it at least suggests that latent
+          representations from different modalities are not completely isolated from each other;
+          they may have the opportunity to become compatible and aligned with one another in a
+          higher-level semantic space.
+        </p>
+
+        <p>
+          Of course, this is only a beginning. How representations from different modalities
+          interact with each other, how to construct text latents that are more efficient, more
+          abstract, and more semantic, and how to balance compression ratio, semantic fidelity,
+          and the difficulty of prior modeling are all questions that are highly worth deeper
+          exploration in the future.
+        </p>
+
+        <p class="authors-note-thanks">
+          Finally, we sincerely thank the community for its attention, discussion, and promotion
+          of Cola DLM. We warmly welcome everyone to discuss it with us, and we sincerely hope to
+          receive more feedback, suggestions, and criticism. This is a relatively radical attempt,
+          and many problems are still far from being solved. Every comment from the community will
+          be extremely helpful for shaping our future research directions. Thank you all!
+        </p>
+      </div>
+    </article>
   </div>
 </section>
 

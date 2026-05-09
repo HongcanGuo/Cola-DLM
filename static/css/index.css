@@ -739,6 +739,40 @@ figure.cola-figure figcaption b { color: var(--ink); }
   .afterword-fulltext .katex { font-size: 0.95em; }
 }
 
+/* =================== AUTHOR'S NOTE =================== */
+.authors-note {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  margin-top: 1.4rem;
+  transition: box-shadow var(--transition);
+}
+.authors-note:hover { box-shadow: var(--shadow-2); }
+.authors-note-body {
+  padding: 1.7rem 2rem 1.9rem;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ink-soft);
+}
+.authors-note-body > *:first-child { margin-top: 0; }
+.authors-note-body > *:last-child { margin-bottom: 0; }
+.authors-note-body p { margin: 0 0 1rem; }
+.authors-note-body strong { color: var(--ink); font-weight: 700; }
+.authors-note-body em { color: var(--ink); font-style: italic; }
+.authors-note-thanks {
+  margin-top: 1.4rem !important;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--rule);
+  color: var(--ink);
+  font-style: italic;
+}
+@media (max-width: 720px) {
+  .authors-note-body { padding: 1.2rem 1.2rem 1.4rem; font-size: 0.96rem; }
+}
+
 /* =================== DETAILS / ACCORDION =================== */
 .detail-block {
   background: var(--bg-card);
