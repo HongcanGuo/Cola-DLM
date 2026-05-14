@@ -267,6 +267,20 @@ a:hover { color: var(--accent); }
   box-shadow: var(--shadow-1);
 }
 .btn .icon { font-size: 1rem; line-height: 1; }
+.btn .zhihu-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05em;
+  height: 1.05em;
+  border-radius: 3px;
+  background: #fff;
+  color: #056de8;
+  font-weight: 800;
+  font-size: 0.82em;
+  line-height: 1;
+  letter-spacing: 0;
+}
 .btn.is-soft {
   background: #f1f1f3;
   color: var(--ink-soft);
